@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-    console.assert.log('We are connected');
+    console.log('We are connected');
 });
 
 const productsDetailSchema = new mongoose.Schema({
@@ -23,10 +23,9 @@ const shippingsSchema = new mongoose.Schema({
 });
 
 const productsDetail = mongoose.model('productsDetail', productsDetailSchema);
-const shippingsSchema = mongoose.model('shippingsSchema', shippingsSchema);
+const shippings = mongoose.model('shippingsSchema', shippingsSchema);
 
-module.exports = productsDetail;
-module.exports = shippingsSchema;
+module.exports = { productsDetail: productsDetail, shippings: shippings };
 
 
 
