@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Products from './Products.js'
 
 class App extends React.Component {
 
@@ -31,9 +32,7 @@ getProducts () {
 render() {
     return (
         <div className="app-container">
-         <div>
         <Products products={this.state.products}/>
-        </div>
         </div>
     );
   }

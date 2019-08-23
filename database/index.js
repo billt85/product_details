@@ -26,14 +26,3 @@ const productsDetail = mongoose.model('productsDetail', productsDetailSchema);
 const shippings = mongoose.model('shippingsSchema', shippingsSchema);
 
 module.exports = { productsDetail: productsDetail, shippings: shippings };
-
-
-
-
-
-
-
-
-
-
-// var randomNumber = Math.floor(Math.random()*100);
